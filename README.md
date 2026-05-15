@@ -4,7 +4,7 @@ Sitio web para LS45 Automotriz, empresa chilena de compra y venta de vehículos 
 
 ## Secciones del sitio
 
-- Vehículos disponibles (con filtros y galeria)
+- Vehículos disponibles (con filtros y galería)
 - Servicios
 - Información de la empresa
 - Blog
@@ -34,6 +34,9 @@ Básicamente es un archivo con mejoras pequeñas pero importantes:
 - Ajustes en la sección "Por qué elegirnos" y servicios
 - Mejoras en el footer para que los textos se lean bien sobre el fondo oscuro
 - Adaptación para móviles (responsive)
+- Navbar translúcido al hacer scroll
+- Cards clickeables en CTA (compra/vende tu vehículo)
+- Botones copiables en la sección de contacto
 
 ## Estructura del proyecto
 
@@ -43,8 +46,19 @@ Seguimos la estructura que venía con la plantilla original:
 - `css/` - Archivos de estilos (incluyendo ls45-custom.css)
 - `sass/` - Archivos SCSS modulares
 - `img/` - Imágenes organizadas por secciones
+- `js/` - Archivos JavaScript
 
 Dentro de `sass/` están los archivos SCSS separados por componentes: `_header.scss`, `_hero.scss`, `_car.scss`, `_footer.scss`, `_services.scss`, etc.
+
+## Cambios recientes realizados
+
+- Se eliminaron los botones "Contáctanos" y "Ver Servicios" de la sección Inicio
+- Se eliminó la sección "¿Por qué elegirnos?"
+- Se eliminó la topbar con datos de contacto del header
+- Se hicieron clickeables las cards de "Compra tu Vehículo" y "Vende tu Vehículo" (ahora solo muestran imagen)
+- Se agregaron botones copiables en la sección contactanos (Jimmy, Jhoanna y Email)
+- Se eliminaron los números de teléfono escritos en el footer
+- Se implementó navbar estático pero translúcido al hacer scroll
 
 ## Equipo
 

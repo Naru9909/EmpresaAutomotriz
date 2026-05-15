@@ -628,7 +628,7 @@ a.car__item:hover h5 {
 
 /* =============================================
    9. SERVICIOS - CARDS ALTURA UNIFORME
-============================================= */
+ ============================================= */
 
 #servicios .row {
     display: flex;
@@ -658,9 +658,184 @@ a.car__item:hover h5 {
     flex: 1;
     margin-bottom: 0 !important;
 }
+
+
+/* =============================================
+   10. NAVBAR FIJO Y TRANSLUCIDO AL SCROLLEAR
+ ============================================= */
+
+body {
+    padding-top: 0 !important;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background 0.3s ease, box-shadow 0.3s ease, backdrop-filter 0.3s ease;
+    background: transparent;
+}
+
+/* Cuando el header es transparente (al inicio), textos claros */
+.header .header__menu ul li a {
+    color: #ffffff !important;
+}
+
+.header .header__nav__widget .primary-btn {
+    color: #ffffff !important;
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.header.scrolled {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+.header.scrolled .header__logo img {
+    max-height: 45px;
+}
+
+.header.scrolled .header__menu ul li a {
+    color: #111 !important;
+}
+
+.header.scrolled .header__nav__widget .primary-btn {
+    background: #db2d2e;
+    color: #ffffff !important;
+    border-color: #db2d2e;
+}
+
+/* Ajuste para que el hero no quede debajo del navbar */
+.hero {
+    padding-top: 100px !important;
+}
+
+
+/* =============================================
+   11. CTA - CARDS CLICKABLES
+ ============================================= */
+
+.cta__item--clickable {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    padding: 70px 50px !important;
+    min-height: 300px;
+    background-size: cover !important;
+    background-position: center !important;
+    cursor: pointer;
+    text-decoration: none !important;
+}
+
+.cta__item--clickable::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: transparent;
+    z-index: 0;
+    transition: background 0.3s ease;
+}
+
+.cta__item--clickable:hover::before {
+    background: transparent;
+}
+
+.cta__item--clickable::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: transparent;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.cta__item--clickable:hover::after {
+    opacity: 0;
+}
+
+
+/* =============================================
+   12. CONTACTO - BOTONES COPIAR EN COLUMNAS
+   Primera columna: WhatsApps | Segunda columna: Email
+ ============================================= */
+
+.footer__contact__option {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.footer__contact__option.contact-phones {
+    justify-content: flex-end;
+}
+
+.footer__contact__option.contact-email {
+    justify-content: flex-start;
+}
+
+.footer__contact__option .copy-btn {
+    font-size: 15px;
+    color: #ffffff;
+    background: #db2d2e;
+    display: inline-block;
+    font-weight: 700;
+    padding: 14px 18px 14px 24px;
+    border-radius: 2px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.footer__contact__option .copy-btn i:first-child {
+    margin-right: 5px;
+}
+
+.footer__contact__option .copy-btn .copy-icon {
+    margin-left: 8px;
+    font-size: 12px;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+}
+
+.footer__contact__option .copy-btn.email {
+    background: #ffffff;
+    color: #323232;
+}
+
+.footer__contact__option .copy-btn.email i:first-child {
+    color: #db2d2e;
+}
+
+.footer__contact__option .copy-btn:hover {
+    background: #b01c1d;
+    transform: translateY(-2px);
+}
+
+.footer__contact__option .copy-btn.email:hover {
+    background: #f0f0f0;
+}
+
+.footer__contact__option .copy-btn:hover .copy-icon {
+    opacity: 1;
+}
+
+.copy-btn.copied {
+    background: #28a745 !important;
+    transform: translateY(0) !important;
+}
+
+
 /* =============================================
    RESPONSIVO MÓVIL
-============================================= */
+ ============================================= */
 
 @media (max-width: 992px) {
     /* Header */

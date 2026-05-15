@@ -232,4 +232,30 @@
         });
     });
 
+    /*------------------
+        Navbar Translúcido al Scroll
+    --------------------*/
+    $(window).on('scroll', function () {
+        if ($(this).scrollTop() > 50) {
+            $('#main-header').addClass('scrolled');
+        } else {
+            $('#main-header').removeClass('scrolled');
+        }
+    });
+
+    /*------------------
+        Botones Copiar en Footer
+    --------------------*/
+    $('.copy-btn').on('click', function () {
+        var textToCopy = $(this).data('copy');
+        navigator.clipboard.writeText(textToCopy).then(function () {
+            $(this).addClass('copied');
+            setTimeout(function () {
+                $('.copy-btn').removeClass('copied');
+            }, 1500);
+        }.bind(this)).catch(function (err) {
+            console.log('Error al copiar: ', err);
+        });
+    });
+
 })(jQuery);
