@@ -1,0 +1,746 @@
+/* ============================================
+   LS45 AUTOMOTRIZ - Estilos Personalizados
+   Archivo: ls45-custom.css
+============================================ */
+
+/* Scroll suave global */
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* =============================================
+   0. BOTONES FLOTANTES REDES SOCIALES
+============================================= */
+
+.float-social {
+    position: fixed;
+    bottom: 28px;
+    right: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 9999;
+}
+
+.float-social__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    color: #ffffff !important;
+    font-size: 18px;
+    text-decoration: none;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.float-social__btn:hover {
+    transform: translateY(-3px) scale(1.08);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.30);
+    color: #ffffff !important;
+}
+
+.float-social__facebook {
+    background: #1877f2;
+}
+
+.float-social__instagram {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+}
+
+.float-social__whatsapp {
+    background: #25d366;
+}
+
+
+/* =============================================
+   0. CTA - OVERLAY SOBRE IMÁGENES DE FONDO
+============================================= */
+
+.cta__item {
+    position: relative;
+    overflow: hidden;
+    padding: 70px 50px !important;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-size: cover !important;
+    background-position: center !important;
+}
+
+.cta__item::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(10, 10, 30, 0.72);
+    z-index: 0;
+}
+
+.cta__item h4,
+.cta__item p,
+.cta__item a {
+    position: relative;
+    z-index: 1;
+    color: #ffffff !important;
+}
+
+.cta__item h4 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.cta__item p {
+    font-size: 15px;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+
+/* =============================================
+   1. HEADER ALINEADO
+============================================= */
+
+.header .container > .row {
+    display: flex !important;
+    align-items: center !important;
+    flex-wrap: nowrap !important;
+    padding: 12px 0;
+}
+
+.header .container > .row > .col-lg-2 {
+    flex: 0 0 auto;
+    width: auto;
+    padding-right: 20px;
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+}
+
+.header__logo img {
+    max-height: 50px;
+    width: auto;
+}
+
+.header .container > .row > .col-lg-10 {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+}
+
+.header__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.header__menu {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.header__menu ul {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.header__menu ul li a {
+    padding: 8px 16px;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    display: block;
+}
+
+.header__nav__widget {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.header__nav__widget__btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header__nav__widget .primary-btn {
+    padding: 10px 22px;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+
+/* =============================================
+   2. HERO - FONDO Y EFECTO FUTURISTA
+============================================= */
+
+.hero.set-bg {
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    position: relative;
+    filter: none;
+}
+
+.hero.set-bg::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(
+        135deg,
+        rgba(0, 10, 40, 0.82) 0%,
+        rgba(0, 30, 80, 0.65) 40%,
+        rgba(0, 80, 160, 0.25) 70%,
+        rgba(0, 200, 255, 0.08) 100%
+    );
+    z-index: 1;
+}
+
+.hero.set-bg::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 3px,
+        rgba(0, 180, 255, 0.03) 3px,
+        rgba(0, 180, 255, 0.03) 4px
+    );
+    z-index: 2;
+    pointer-events: none;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 3;
+}
+
+.hero__text__title h2 {
+    text-shadow: 0 0 20px rgba(0, 200, 255, 0.6),
+                 0 0 40px rgba(0, 150, 255, 0.3);
+}
+
+.hero__text__title span {
+    color: #00cfff;
+    letter-spacing: 3px;
+    text-shadow: 0 0 10px rgba(0, 200, 255, 0.8);
+}
+
+.hero__text__price h2 {
+    text-shadow: 0 0 15px rgba(0, 200, 255, 0.5);
+}
+
+.hero .primary-btn {
+    border: 1px solid rgba(0, 200, 255, 0.4);
+    box-shadow: 0 0 15px rgba(0, 150, 255, 0.3);
+}
+
+
+/* =============================================
+   3. HERO - FORMULARIO MÁS A LA DERECHA
+============================================= */
+
+.hero .col-lg-7 {
+    flex: 0 0 45%;
+    max-width: 45%;
+}
+
+.hero .col-lg-5 {
+    flex: 0 0 55%;
+    max-width: 55%;
+    display: flex;
+    justify-content: flex-end;
+    padding-left: 0;
+}
+
+.hero__tab {
+    margin-left: auto;
+    max-width: 360px;
+    width: 100%;
+}
+
+
+/* =============================================
+   4. VEHÍCULOS - CARDS UNIFORMES + LIGHTBOX HOVER
+============================================= */
+
+/* Cuando el <a> es el car__item completo */
+a.car__item {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+a.car__item h5,
+a.car__item h6,
+a.car__item p,
+a.car__item li,
+a.car__item span {
+    color: inherit;
+    text-decoration: none;
+}
+
+a.car__item:hover h5 {
+    color: #db2d2e;
+}
+
+/* Hover: la card entera se levanta */
+.car-filter .card-venta,
+.car-filter .card-vendido {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.car-filter .card-venta:hover,
+.car-filter .card-vendido:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18);
+}
+
+/* Overlay de lupa sobre la imagen */
+.car__item__pic {
+    position: relative;
+}
+
+.car__item__pic a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.car__item__pic__overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.25s ease;
+}
+
+.car__item__pic__overlay i {
+    font-size: 32px;
+    color: #ffffff;
+    opacity: 0;
+    transform: scale(0.7);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.car__item__pic:hover .car__item__pic__overlay {
+    background: rgba(0, 0, 0, 0.48);
+}
+
+.car__item__pic:hover .car__item__pic__overlay i {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.car-filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.car-filter .card-venta {
+    flex: 0 0 30%;
+    max-width: 30%;
+    margin: 0 1.5% 30px 1.5%;
+}
+
+.car-filter .card-vendido {
+    flex: 0 0 30%;
+    max-width: 30%;
+    margin: 0 1.5% 30px 1.5%;
+}
+
+.car__item {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.car__item__pic {
+    width: 100%;
+    height: 250px;
+    background: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.car__item__pic img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    background: #f0f0f0;
+}
+
+.car__item__text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+    .car-filter .card-venta,
+    .car-filter .card-vendido {
+        flex: 0 0 90%;
+        max-width: 90%;
+        margin: 0 5% 20px 5%;
+    }
+}
+
+
+/* =============================================
+   5. SECCIÓN CHOOSEUS
+============================================= */
+
+.chooseus {
+    position: relative;
+    overflow: hidden;
+    min-height: 560px;
+    display: flex;
+    align-items: center;
+    padding: 70px 0;
+}
+
+.chooseus__video {
+    position: absolute !important;
+    right: 0;
+    top: 0;
+    width: 55%;
+    height: 100%;
+    background-size: cover !important;
+    background-position: center !important;
+    z-index: 0;
+}
+
+.chooseus .container {
+    position: relative;
+    z-index: 1;
+}
+
+.chooseus .col-lg-5 {
+    background: rgba(255, 255, 255, 0.92);
+    padding: 50px 40px 55px;
+    border-radius: 6px;
+}
+
+
+/* =============================================
+   6. SECCIÓN IMPORTACIÓN / LATEST BLOG
+============================================= */
+
+.latest__blog__item__pic {
+    height: 280px !important;
+    background-size: contain !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-color: #f5f5f5 !important;
+    border-radius: 6px 6px 0 0;
+}
+
+.latest__blog__item {
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.latest__blog__item__text {
+    flex: 1;
+    padding: 20px;
+    background: #fff;
+}
+
+
+/* =============================================
+   8. SECCIÓN UBÍCANOS
+============================================= */
+
+.ubicanos {
+    background: #f9f9f9;
+}
+
+.ubicanos__info {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    padding-right: 20px;
+}
+
+.ubicanos__info__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.ubicanos__info__item i {
+    font-size: 22px;
+    color: #db2d2e;
+    margin-top: 3px;
+    flex-shrink: 0;
+    width: 24px;
+    text-align: center;
+}
+
+.ubicanos__info__item h6 {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #111;
+    margin-bottom: 4px;
+}
+
+.ubicanos__info__item p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.ubicanos__info__item p a {
+    color: #555;
+    text-decoration: none;
+}
+
+.ubicanos__info__item p a:hover {
+    color: #db2d2e;
+}
+
+.ubicanos__map {
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.10);
+}
+
+.ubicanos__map iframe {
+    display: block;
+    width: 100%;
+}
+
+.footer {
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    position: relative;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(15, 15, 20, 0.88);
+    z-index: 0;
+}
+
+.footer .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* --- Textos claros sobre fondo oscuro --- */
+
+.footer__about p,
+.footer__widget ul li a,
+.footer__brand ul li a,
+.footer__brand ul li,
+.footer__copyright__text p {
+    color: #cccccc !important;
+}
+
+.footer__widget ul li a:hover,
+.footer__brand ul li a:hover {
+    color: #ffffff !important;
+}
+
+.footer__widget h5,
+.footer__brand h5,
+.footer__contact__title h2 {
+    color: #ffffff !important;
+}
+
+.footer__brand ul li i,
+.footer__widget ul li i {
+    color: #aaaaaa;
+}
+
+/* Teléfonos Jimmy / Jhoanna dentro del footer__brand */
+.footer__brand p {
+    color: #cccccc;
+    margin-bottom: 4px;
+    font-size: 14px;
+}
+
+.footer__brand p strong {
+    color: #ffffff;
+}
+
+.footer__brand p a {
+    color: #cccccc !important;
+    text-decoration: none;
+}
+
+.footer__brand p a:hover {
+    color: #ffffff !important;
+}
+
+/* Contact option: email badge (fondo blanco, texto oscuro — se deja igual) */
+.footer__contact__option .option__item.email {
+    color: #323232 !important;
+}
+
+
+/* =============================================
+   9. SERVICIOS - CARDS ALTURA UNIFORME
+============================================= */
+
+#servicios .row {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    gap: 0;
+}
+
+#servicios [class*="col-"] {
+    display: flex;
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+.services__item {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 0 !important;
+    box-sizing: border-box;
+}
+
+.services__item p {
+    flex: 1;
+    margin-bottom: 0 !important;
+}
+/* =============================================
+   RESPONSIVO MÓVIL
+============================================= */
+
+@media (max-width: 992px) {
+    /* Header */
+    .header .container > .row {
+        flex-wrap: wrap !important;
+        justify-content: center;
+    }
+    .header__menu ul {
+        flex-direction: column;
+        gap: 8px;
+    }
+    .header__nav__widget {
+        margin-top: 10px;
+        justify-content: center;
+    }
+
+    /* Hero */
+    .hero__text__title h2 {
+        font-size: 32px;
+    }
+    .hero__text__title span {
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Hero */
+    .hero .col-lg-8,
+    .hero .col-lg-7,
+    .hero .col-lg-5 {
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
+        padding: 0 15px;
+    }
+
+    /* Vehículos */
+    .car-filter .card-venta,
+    .car-filter .card-vendido {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin: 0 0 20px 0;
+    }
+    .car__item__pic {
+        height: 200px;
+    }
+
+    /* Servicios */
+    #servicios .row {
+        flex-wrap: wrap !important;
+    }
+    #servicios .col-lg-3 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    /* Chooseus */
+    .chooseus {
+        flex-direction: column;
+        min-height: auto;
+    }
+    .chooseus__video {
+        position: relative !important;
+        width: 100%;
+        height: 240px;
+        margin-top: 20px;
+    }
+
+    /* Ubícanos */
+    .ubicanos__info {
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+    .ubicanos__map iframe {
+        height: 300px;
+    }
+
+    /* Footer */
+    .footer__brand, .footer__widget, .footer__about {
+        text-align: center;
+    }
+}
